@@ -1,9 +1,21 @@
-var express = require('express');
-var router = express.Router();
+var Photos = require('../models/Photo');
+var path = require('path');
+var fs = require('fs');
 
-/* GET photos listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+var join = path.join;
 
-module.exports = router;
+exports.list = function(req, res, next) {
+  Photos.find(
+      {}, 
+      function(err, photos) {
+
+          if (err) {
+              return next(err);
+          }
+
+          res.render('photos', {
+              title: 'Photos',
+              photos: photos
+          });
+      });
+};

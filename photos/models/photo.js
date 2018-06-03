@@ -1,4 +1,6 @@
 var mongoose = require('mongoose');
+var assert = require('assert');
+var path = require('path');
 
 var db = mongoose.connect('mongodb://127.0.0.1/photo_app',
 function(err) {
@@ -9,7 +11,7 @@ function(err) {
          }
      });
 
-     // Define the Photos schema
+// Define the Photos schema
 var schema = new mongoose.Schema({
     name: String,
     path: String
@@ -20,8 +22,33 @@ var Model = mongoose.model('Photo', schema);
 module.exports = Model;
 
 new Model({
-    name: 'Express (jpg)',
+    name: '01 (jpg)',
     path: 'express.jpg'
 }).save();
 
-    
+new Model({
+    name: '02 (jpg)',
+    path: 'express.jpg'
+}).save();
+
+new Model({
+    name: '03 (jpg)',
+    path: 'express.jpg'
+}).save();
+
+new Model({
+    name: '04 (jpg)',
+    path: 'express.jpg'
+}).save();
+
+new Model({
+    name: '05 (jpg)',
+    path: 'express.jpg'
+}).save();
+
+new Model({
+    name: '06 (jpg)',
+    path: 'express.jpg'
+}).save();
+
+   
