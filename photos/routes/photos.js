@@ -1,4 +1,4 @@
-var Photos = require('../models/Photo');
+var Photos = require('../models/photos');
 var path = require('path');
 var fs = require('fs');
 
@@ -19,3 +19,6 @@ exports.list = function(req, res, next) {
           });
       });
 };
+
+
+
