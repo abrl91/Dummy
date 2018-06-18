@@ -12,6 +12,7 @@ var photos = require('./routes/photos');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var uploadRouter = require('./routes/upload');
+var downloadRouter = require('./routes/download');
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -32,6 +33,7 @@ app.use('/users', usersRouter);
 app.use('/photos', photos.list);
 app.use('/upload', uploadRouter);
 
+app.get('/photo/:id/download', downloadRouter.download(app.get('photos')));
 
 app.use(express.static(path.join(__dirname, 'public')));
 

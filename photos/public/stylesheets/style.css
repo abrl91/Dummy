@@ -1,25 +1,91 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-size: 20px 20px;
+  margin: 0 auto;
 }
 
 a {
-  color: #00B7FF;
+  color: whitesmoke;
 }
 
 .photo {
-  width: 50%;
+  width: 400px;
+  margin: 20px;
 }
 
 .label-title {
   display: block;
 }
 
+/*
 .upload-form {
-  max-width: 400px;
-}
+  max-width: 200px;
+} */
 
 .nav>li{
   display: inline-block;
+  margin-left: 165px;
+  background-color: green;
+  font-weight: bold;
+  padding: 15px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+
+
+  
+}
+
+.welcome {
+  width: 50%;
+  /*border: 3px solid  #00B7FF;*/
+  padding: 10px;
+  
+}
+
+.center {
+  text-align: center;
+  color: aliceblue;
+  background-color: black;
+  padding: 20px;
+}
+
+.bghome {
+  background-image: url("bgimg/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mynav>li {
+  display: inline-block;
+  margin-left: 5px;
+  background-color: black;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 15%;
+  margin-bottom: 10px;
+  margin-top: -20px;
+
+}
+
+div {
+  display: inline-block;
+}
+
+.bgup {
+  background-image: url("bgimg/bgup.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+[type="submit"] {
+  padding: 7px;
+  background-color: #3E82CB;
+  font-weight: bold;
+}
+
+[type="file"] {
+  padding: 5px;
+  background-color: white;
+
 }

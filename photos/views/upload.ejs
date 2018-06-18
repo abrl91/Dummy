@@ -1,16 +1,25 @@
-
+<html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/style.css"/>
+    </head>
+    <body class="bgup">
+        <ul class="mynav">
+            <li><a href="/">Home</a></li>
+            <li><a href="./photos">Photos</a></li>
+        </ul>
+<hr>
 
 <form method="post" enctype="multipart/form-data" action="/upload">
 
-<div>
-user Name<input type="text">
-</div>
-<div>
-Img:<input type="text">
-</div>
-<div>
-<input type="submit" value=" send">
-<input type="file" name="photo">
-</div>
+    <div>
+        <input type="file" name="photo">    
+        <input type="submit" value="send">
+        
+    </div>
 </form>
+
+
+<% include ./partials/footer %>
+</body>
+</html>
 

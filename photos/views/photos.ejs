@@ -1,25 +1,25 @@
 <% include ./partials/header %>
 
-<h1>Photos</h1>
-<p>Photos application</p>
+
+<ul class="mynav">
+<li><a href="/">Home</a></li>
+<li><a href="/upload">Upload</a></li>
+</ul>
+<hr>
 
 <div id="photos">
     <div class="row">
         <% photos.forEach(function(photo){ %>
         <div class="col-md-4 col-sm-6">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><%= photo.name %></h3>
-                </div>
-                <div class="panel-body">
+
+                <div>
+                    <a href='/photo/<%=photo.id%>/download'>
                         <img src="/images/<%= photo.path %>" class="photo">
                     </a>
                 </div>
-            </div>
-        </div>
+        </div> 
         <% }) %>
     </div>
 
-</div>
+</div> 
 
-<% include ./partials/footer %>

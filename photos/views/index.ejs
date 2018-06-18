@@ -3,10 +3,18 @@
   <head>
     <title><%= title %></title>
   </head>
-  <body>
+  <body class="bghome">
 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <div class="welcome">
+    <h1 class="center">Welcome to <%= title %></h1>
 
-  </body>
-</html>
+    <% include ./partials/header %>
+    
+    <ul class="nav navbar-nav">
+       <li><a href="./photos">Photos</a></li>
+       <li><a href="/upload">Upload</a></li>
+   </ul>
+  </div>
+ 
+
+    <% include ./partials/footer %>
